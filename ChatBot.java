@@ -55,7 +55,13 @@ public class ChatBot {
     //Methods (What the object does)
     public String respond(String prompt) {
         if (prompt.equals("age")) {
-            return age;
+            return "I am "+age+" years old.";
+        }
+        else if (prompt.equals("Hello")) {
+            return "Hello!";
+        }
+        else if (prompt.equals("weight")) {
+            return ""+weight;
         }
         return "I don't understand yet.";
     }

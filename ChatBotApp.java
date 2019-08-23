@@ -5,6 +5,8 @@
  */
 package chatbotapp;
 
+import java.util.Scanner;
+
 /**
  *
  * @author jword
@@ -17,8 +19,14 @@ public class ChatBotApp {
      */
     public static void main(String[] args) {
         cb = new ChatBot();
-        String response = cb.respond("Hello!");
-        System.out.print(response);
+        Scanner kb = new Scanner(System.in);
+        String prompt = "";
+        while (!prompt.equals("exit")) {
+            prompt = kb.nextLine();
+            String response = cb.respond(prompt);
+            System.out.print(response);
+        }
+        
     }
     
 }
