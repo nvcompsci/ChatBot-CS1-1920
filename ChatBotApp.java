@@ -11,11 +11,14 @@ package chatbotapp;
  */
 public class ChatBotApp {
 
+    private static ChatBot cb;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        cb = new ChatBot();
+        String response = cb.respond("Hello!");
+        System.out.print(response);
     }
     
 }

@@ -14,12 +14,14 @@ public class ChatBot {
     private String name;
     private int age;
     private double weight;
+    private Basket basket;
     
     //Constructor (Creates the object)
     public ChatBot() {
         name = "Bob";
         age = 4;
         weight = 50;
+        basket = new Basket();
     }
     
     //Getters and Setters
@@ -52,10 +54,13 @@ public class ChatBot {
     
     //Methods (What the object does)
     public String respond(String prompt) {
+        if (prompt.equals("age")) {
+            return age;
+        }
         return "I don't understand yet.";
     }
     
     public void eat(Food food) {
-        weight += food.weight;
+        weight += food.getWeight();
     }
 }
